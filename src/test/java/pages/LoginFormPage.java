@@ -10,7 +10,9 @@ public class LoginFormPage {
         this.nav = nav;
     }
 
-    public ? typeLogin(String login){
-        nav.findElement(By.id("signinbox")).findElement(By.name("login")).sendKeys("julio001");
+    public LoginFormPage typeLogin(String login){
+        nav.findElement(By.id("signinbox")).findElement(By.name("login")).sendKeys(login);
+        
+        return this;
     }
 }
