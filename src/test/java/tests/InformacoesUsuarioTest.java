@@ -40,9 +40,6 @@ public class InformacoesUsuarioTest {
 
         nav = Web.createChrome();
 
-        //Clicando no link "Sign in"
-        nav.findElement(By.linkText("Sign in")).click();
-
         //Identificando o formulario de login
         WebElement formSignInbox = nav.findElement(By.id("signinbox"));
 
