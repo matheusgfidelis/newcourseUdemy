@@ -12,7 +12,13 @@ public class LoginFormPage {
 
     public LoginFormPage typeLogin(String login){
         nav.findElement(By.id("signinbox")).findElement(By.name("login")).sendKeys(login);
-        
+
+        return this;
+    }
+
+    public LoginFormPage typePassword(String passaword){
+        nav.findElement(By.id("signinbox")).findElement(By.name("password")).sendKeys(passaword);
+
         return this;
     }
 }
