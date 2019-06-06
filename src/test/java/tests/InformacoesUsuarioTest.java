@@ -22,6 +22,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import suport.Generator;
 import suport.Screenshot;
+import suport.Web;
 
 import java.util.concurrent.TimeUnit;
 
@@ -37,14 +38,7 @@ public class InformacoesUsuarioTest {
     @Before
     public void setUp() {
 
-        System.setProperty("webdriver.chrome.driver" ,"\\C:\\Users\\mgoisfid\\drivers\\chromedriver.exe");
-
-        //criando objeto navegador
-        nav = new ChromeDriver();
-        nav.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-        //navegando até a pagina
-        nav.get("http://www.juliodelima.com.br/taskit/");
+        nav = Web.createChrome();
 
         //Clicando no link "Sign in"
         nav.findElement(By.linkText("Sign in")).click();
