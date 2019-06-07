@@ -4,11 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPage {
-    private WebDriver nav;
+public class LoginPage extends BasePage{
 
     public LoginPage(WebDriver nav){
-        this.nav = nav;
+        super(nav);
     }
 
     public LoginFormPage clickSignIn(){

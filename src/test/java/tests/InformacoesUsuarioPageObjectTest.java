@@ -20,11 +20,12 @@ public class InformacoesUsuarioPageObjectTest {
 
     @Test
     public void testAdicionaUmaInformacaoAdicionalDoUsuario(){
-
         new LoginPage(nav)
-            .clickSignIn()
-            .typeLogin("julio0001")
-            .typePassword("123456");
+                .clickSignIn()
+                .login("julio0001", "123456")
+                .clickMe()
+                .clickMoreDataAboutYou()
+                .clickButtonMoreDataAboutYou();
 
     }
 
