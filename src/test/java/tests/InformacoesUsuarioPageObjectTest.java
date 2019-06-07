@@ -25,12 +25,14 @@ public class InformacoesUsuarioPageObjectTest {
                 .login("julio0001", "123456")
                 .clickMe()
                 .clickMoreDataAboutYou()
-                .clickButtonMoreDataAboutYou();
+                .clickButtonMoreDataAboutYou()
+                .addContact("Phone","+5511999998877")
+                .catchTextToast();
 
     }
 
     @After
     public void tearDown(){
-        nav.quit();
+        //nav.quit();
     }
 }
