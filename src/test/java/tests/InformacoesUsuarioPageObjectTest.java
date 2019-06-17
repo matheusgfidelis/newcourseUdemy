@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 import suport.Web;
+
 import static org.junit.Assert.*;
 
 @RunWith(DataDrivenTestRunner.class)
@@ -21,7 +22,7 @@ public class InformacoesUsuarioPageObjectTest {
     @Before
     public void setUp(){
 
-        nav = Web.createChrome();
+        nav = Web.createBrowserStack();
 
     }
 
@@ -48,6 +49,6 @@ public class InformacoesUsuarioPageObjectTest {
 
     @After
     public void tearDown(){
-        //nav.quit();
+        nav.quit();
     }
 }
